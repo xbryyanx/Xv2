@@ -363,7 +363,7 @@ function startGalleryTimer() {
 
             nextSlide();
 
-        }, 500000);
+        }, 5000);
 
 }
 
