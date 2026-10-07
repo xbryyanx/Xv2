@@ -272,60 +272,7 @@ if (prevButton) {
 }
 
 
-/* ==========================================
-   AUTOMATIC SLIDESHOW
-========================================== */
 
-function startGalleryTimer() {
-
-    galleryTimer =
-        setInterval(() => {
-
-            nextSlide();
-
-        }, 5000);
-
-}
-
-
-function stopGalleryTimer() {
-
-    clearInterval(galleryTimer);
-
-}
-
-
-function restartGalleryTimer() {
-
-    stopGalleryTimer();
-
-    startGalleryTimer();
-
-}
-
-
-/* ==========================================
-   PAUSE WHEN MOUSE IS OVER GALLERY
-========================================== */
-
-const gallery =
-    document.querySelector(".gallery-carousel");
-
-
-if (gallery) {
-
-    gallery.addEventListener(
-        "mouseenter",
-        stopGalleryTimer
-    );
-
-
-    gallery.addEventListener(
-        "mouseleave",
-        startGalleryTimer
-    );
-
-}
 
 
 /* ==========================================
