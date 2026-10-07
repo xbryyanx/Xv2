@@ -915,7 +915,20 @@ color:white;
    *LOCATION / MAP*
 
 ========================================================== **/
+#reception{
+    text-align: center;
+}
 
+#reception h2,
+#reception h3,
+#reception p{
+    text-align: center;
+}
+
+#reception .mapButton{
+    display: inline-block;
+    margin: 0 auto;
+}
 
 #location {
     background: white;
