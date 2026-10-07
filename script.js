@@ -150,6 +150,17 @@ if (gallerySlides.length > 0 && galleryDots) {
 
 }
 
+   /* ==========================================
+   START GALLERY
+========================================== */
+
+if (gallerySlides.length > 0) {
+
+    showSlide(0);
+
+    startGalleryTimer();
+
+}
 
 /* ==========================================
    SHOW PHOTO
@@ -339,17 +350,7 @@ function handleGallerySwipe() {
 }
 
 
-/* ==========================================
-   START GALLERY
-========================================== */
 
-if (gallerySlides.length > 0) {
-
-    showSlide(0);
-
-    startGalleryTimer();
-
-}
 
    /* ==========================================
    AUTOMATIC SLIDESHOW
