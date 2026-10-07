@@ -350,6 +350,61 @@ if (gallerySlides.length > 0) {
     startGalleryTimer();
 
 }
+
+   /* ==========================================
+   AUTOMATIC SLIDESHOW
+========================================== */
+
+function startGalleryTimer() {
+
+    galleryTimer =
+        setInterval(() => {
+
+            nextSlide();
+
+        }, 500000);
+
+}
+
+
+function stopGalleryTimer() {
+
+    clearInterval(galleryTimer);
+
+}
+
+
+function restartGalleryTimer() {
+
+    stopGalleryTimer();
+
+    startGalleryTimer();
+
+}
+
+
+/* ==========================================
+   PAUSE WHEN MOUSE IS OVER GALLERY
+========================================== */
+
+const gallery =
+    document.querySelector(".gallery-carousel");
+
+
+if (gallery) {
+
+    gallery.addEventListener(
+        "mouseenter",
+        stopGalleryTimer
+    );
+
+
+    gallery.addEventListener(
+        "mouseleave",
+        startGalleryTimer
+    );
+
+}
        
        /* ========================================== IMAGE LIGHTBOX ========================================== */ 
         const images = document.querySelectorAll( ".gallery-slide img" ); images.forEach(image => { image.addEventListener( "click", () => { const box = document.createElement("div"); box.className = "lightbox"; box.innerHTML = ` <img src="${image.src}"> `; document.body.appendChild( box ); box.addEventListener( "click", () => { box.remove(); } ); } ); });
